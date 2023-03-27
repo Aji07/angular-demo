@@ -10,13 +10,6 @@ export class HomeComponent implements OnInit {
   public Data : any;
   public dateToday : any;
 
-  user : any[] = [{'name' : 'Ajith','contactno':'1234567890'},
-                  {'name':'Vijay','contactno':'1234567890'},
-                  {'name':'Gokul','contactno':'1234567890'}
-                  ];
-
-  isLoggedIn : boolean = true;
-
   constructor() { }
 
   ngOnInit(): void {

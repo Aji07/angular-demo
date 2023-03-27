@@ -1,0 +1,14 @@
+
+<br>
+<div>
+  <h1> NgFor Loop: </h1>
+          <ul>
+            <li *ngFor="let item of user; let i=index;">
+              {{i+1}}    -     {{item.name}}      -     {{item.contactno}}
+            </ul>
+  <h1>Switch in Angular</h1>
+
+</div>
+<div *ngIf="!isLoggedIn">
+  <nav><a routerLink="'/login'"  > login</a></nav>
+</div>

@@ -1,7 +1,7 @@
 <br>
-<div class="cart-home">
-
-  <div class="container justify-item-center col-sm-6 col-lg-8">
+<div class="container text-center ">
+<!-- Add Courses -->
+  <div class="col align-items-center">
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
   <div formArrayName="courses">
       <div *ngFor="let course of courses.controls; index as i">
@@ -13,34 +13,27 @@
   <br><br>
   </form>
   <button (click)="addCourse()">Add Course</button>
+
+  <div class="col align-items-center">
+    <!-- Binding -->
+    <h1>Two-way Binding:</h1>
+    <input  type="text" [(ngModel)]="Data" />
+    <span>Value: {{ Data }}</span>
+  <!-- Pipes -->
+    <h1> Inbuild-Pipe's: </h1>
+      <h2>
+      Date: {{dateToday}}<br>
+      DatePipes: {{dateToday | date:'short' | uppercase}}
+      </h2>
+
+      <h1>Custom-Pipes': </h1>
+      <h2>
+        {{Data}} to Reverce: {{Data | customPipe}} </h2>
+  <!-- NgLoops -->
+
+  <!-- Ngif Statement -->
+            
+    </div>
   </div>
 </div>
-
-<div class="example_2">
-  <h1>Two-way Binding:</h1>
-  <input  type="text" [(ngModel)]="Data" />
-  <span>Value: {{ Data }}</span>
-
-  <h1> Inbuild-Pipe's: </h1>
-    <h2>
-    Date: {{dateToday}}<br>
-    DatePipes: {{dateToday | date:'short' | uppercase}}
-    </h2>
-
-    <h1>Custom-Pipes': </h1>
-    <h2>
-      {{Data}} to Reverce: {{Data | customPipe}} </h2>
-
-      <h1> NgFor Loop: </h1>
-        <ul>
-          <li *ngFor="let item of user; let i=index;">
-            {{i+1}}    -     {{item.name}}      -     {{item.contactno}}
-          </ul>
-
-          <div *ngIf="!isLoggedIn">
-            
-            <a routerLink="'/login'"  > login</a>
-          </div>
-  </div>
-
 
