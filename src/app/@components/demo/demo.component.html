@@ -1,14 +1,22 @@
 
 <br>
 <div>
-  <h1> NgFor Loop: </h1>
+  <h2> NgFor Loop: </h2>
           <ul>
-            <li *ngFor="let item of user; let i=index;">
-              {{i+1}}    -     {{item.name}}      -     {{item.contactno}}
+            <li *ngFor="let u of user; let i=index;">
+              {{i+1}}    -     {{u.name}}      -     {{u.contactno}}
             </ul>
-  <h1>Switch in Angular</h1>
-
-</div>
+  <h2>Switch in Angular</h2>
+  <select [(ngModel)]="selectedVal">
+    <option *ngFor="let ite of items" value="item.value">{{ite.str}}</option>
+  </select>
+  <div  [ngSwitch]="selectedVal">
+    <div *ngSwitchCase="'one'" ><h3>1 Pressed</h3></div>
+    <div *ngSwitchCase="'two'" ><h3>2 Pressed</h3></div>
+    <div *ngSwitchCase="'three'" ><h3>3 Pressed</h3></div>
+    <div *ngSwitchDefault>Not Pressed!!!</div>
+  </div>
+  </div>
 <div *ngIf="!isLoggedIn">
   <nav><a routerLink="'/login'"  > login</a></nav>
 </div>

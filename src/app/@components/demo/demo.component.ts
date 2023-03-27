@@ -8,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class DemoComponent implements OnInit {
 
   user : any[] = [{'name' : 'Ajith','contactno':'9629678700'},
-  {'name':'Vijay','contactno':'1234567890'},
-  {'name':'Gokul','contactno':'1234567890'}];
+  {'name':'Vijay','contactno':null},
+  {'name':'Gokul','contactno':'1000000011'},
+  {'name': 'Bala', 'contactno': '0000000001'}];
+
+
+  items:any[]= [{'str':'one', val:1},{'str':'two', val:2},{'str':'three', val:3},];
+  selectedVal:any = 'one';
 
   isLoggedIn : boolean = true;
   constructor() { }
