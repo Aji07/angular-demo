@@ -22,7 +22,8 @@ import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    NgbTooltipModule
+    NgbTooltipModule,
+
   ],
   exports:[
     LoginComponent,

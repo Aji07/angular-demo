@@ -10,6 +10,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './@components/footer/footer.component';
 import { HeaderComponent } from './@components/header/header.component';
 
+import { RouterModule } from '@angular/router';
+import { RouterLink } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +23,7 @@ import { HeaderComponent } from './@components/header/header.component';
     AppRoutingModule,
     AuthModule,
     NgbModule,
+    RouterModule,RouterLink
   ],
   providers: [],
   bootstrap: [AppComponent]
