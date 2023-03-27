@@ -8,7 +8,7 @@
             </ul>
   <h2>Switch in Angular</h2>
   <select [(ngModel)]="selectedVal">
-    <option *ngFor="let ite of items" value="item.value">{{ite.str}}</option>
+    <option *ngFor="let ite of items" value="ite.value">{{ite.str}}</option>
   </select>
   <div  [ngSwitch]="selectedVal">
     <div *ngSwitchCase="'one'" ><h3>1 Pressed</h3></div>
