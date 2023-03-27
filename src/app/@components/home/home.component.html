@@ -1,0 +1,35 @@
+<br>
+<div class="cart-home">
+
+  <div class="container justify-item-center col-sm-6 col-lg-8">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div formArrayName="courses">
+      <div *ngFor="let course of courses.controls; index as i">
+          <input [formControlName]="i" placeholder="Course">
+      </div>
+  </div>
+  <br>
+  <button>Submit</button>
+  <br><br>
+  </form>
+  <button (click)="addCourse()">Add Course</button>
+  </div>
+</div>
+
+<div class="example_2">
+  <h1>Two-way Binding:</h1>
+  <input  type="text" [(ngModel)]="Data" />
+  <span>Value: {{ Data }}</span>
+
+  <h1> Inbuild-Pipe's: </h1>
+    <h2>
+    Date: {{dateToday}}<br>
+    DatePipes: {{dateToday | date:'short' | uppercase}}
+    </h2>
+
+    <h1>Custom-Pipes': </h1>
+    <h2>
+      {{Data}} to Reverce: {{Data | customPipe}} </h2>
+  </div>
+
+

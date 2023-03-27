@@ -1,0 +1,15 @@
+<div class="card-register">
+  <form #gfgform="ngForm">
+    {{gfgform.value | json}}
+  <input type="email" placeholder="Enter Your UserName" name ='UserName' ngModel/>
+  <input type="password" placeholder="Enter Password" name ='password' ngModel/>
+  <button
+    type="submit"
+    (click)="registerUser()"
+    class="btn btn-outline-primary"
+    ngbTooltip="Click to Register"
+    placement="right"
+    >Register</button>
+  </form>
+</div>
+
