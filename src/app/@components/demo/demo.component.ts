@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy} from '@angular/core';
-import { __values } from 'tslib';
+// import { __values } from 'tslib';
 
 @Component({
   selector: 'app-demo',
